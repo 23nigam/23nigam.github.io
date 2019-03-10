@@ -1,7 +1,7 @@
 # Site settings
 title: My Little Website
 tagline: "Changing the world, one uninspired quote at a time"
-url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+url: "" # The base hostname & protocol for your site. Use it if you need absolute URL's
 
 # Social
 socialimg: /img/social.jpg # be sure to change this image
