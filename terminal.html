@@ -1,16 +1,10 @@
-<form>
-    <label for="type">Window Type:</label>
-    <select id="type">
-        <option value="osx">osx</option>
-        <option value="ubuntu" selected>ubuntu</option>
-        <option value="windows">windows</option>
-        <option value="custom">custom</option>
-    </select>
-    <label for="dark">dark</label>
-    <input type="checkbox" id="dark" checked/>
-</form>
+---
+layout: default
+title:  Shell
+---
+
 <!-- shell.js terminal window -->
-<div class="shell ubuntu dark shadow">
+<div class="shell shadow osx dark">
     <div class="status-bar">
         <div class="buttons">
             <a href="javascript:;" class="close" title="Close">
@@ -26,7 +20,14 @@
             </a>
                     
         </div>
-        <div class="title">user@host: ~</div>
+        <div class="title">nigam@nigamshah.dev : ~</div>
     </div>
     <div class="content"></div>
 </div>
+<script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+<script src='https://cdn.terminal.jcubic.pl/wcwidth.js'></script>
+<script src='https://unpkg.com/jquery.terminal/js/jquery.terminal.js'></script>
+<script src='https://unpkg.com/jquery.terminal/js/jquery.mousewheel-min.js'></script>
+<script src='https://unpkg.com/js-polyfills/keyboard.js'></script>
+<script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+<script src="{{ 'resources/js/terminal.js' | relative_url }}"></script>

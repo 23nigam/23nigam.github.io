@@ -1,14 +1,14 @@
 
-<div style="display: inline;display: none;">
+<div style="display: inline;">
 <div id="header">
-	<h2 class="nav-title">NS</h2>
+	<h2 class="nav-title"><a class="nav-title" href="/index.html">NS</a></h2>
 </div>
 
 
-<div id="nav" style="display: none;">
+<div id="nav">
 {% for item in site.nav %}
   {% if item.href contains 'http' %}
-     <a class="nav-title" href="{{ item.href }}">{{ item.title }}</a>
+     <a class="nav-title" href="{{ item.href }}" target="_blank">{{ item.title }}</a>
   {% else %}
      <a class="nav-title" href="{{ item.href | relative_url }}">{{ item.title }}</a>
   {% endif %}

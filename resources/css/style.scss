@@ -32,11 +32,13 @@ a:hover {
 .nav-title
 {
   font-family: "Ubuntu Mono", monospace;
+  font-size: x-large;
 }
 
 .panel-title
 {
   font-family: "Ubuntu Mono", monospace;
+  font-size: -webkit-xxx-large;
 }
 
 .prompt
@@ -63,6 +65,17 @@ a:hover {
   width: 60&;
   float:right;
   margin-top: -60px;
+}
+
+.profile {
+  width: 30%;
+  margin-left: 35%;
+  border-radius: 50%;
+  border-color: #353535;
+  border-width: medium;
+  border-style: solid;
+  background-color: lightgray;
+  margin-top: 2%;
 }
 
 /* ----------- Terminal ------------- */

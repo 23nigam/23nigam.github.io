@@ -6,8 +6,8 @@ subtitle: ''
 
 
 nav:
-- { title: 'About',              href: '/' }
-- { title: 'Resume',             href: '/' }
+- { title: 'Shell',              href: '/terminal.html' }
+- { title: 'Resume',             href: 'https://drive.google.com/file/d/1TQ0-m0O0iCp9C6I3g7_C5Kulih2xYTKA/view?usp=sharing' }
 
 
 #########################
@@ -16,7 +16,7 @@ nav:
 markdown: kramdown
 
 sass:
-  sass_dir: css
+  sass_dir: resources/css
   style:    expanded
 
 exclude:
