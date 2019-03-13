@@ -3,6 +3,8 @@ layout: default
 title:  Shell
 ---
 
+<div id = "auto-typing-terminal" class="auto-typing"></div>
+
 <!-- shell.js terminal window -->
 <div class="shell shadow osx dark">
     <div class="status-bar">
@@ -20,14 +22,16 @@ title:  Shell
             </a>
                     
         </div>
-        <div class="title">nigam@nigamshah.dev : ~</div>
+        <div class="title">guest@nigamshah.dev : ~</div>
     </div>
     <div class="content"></div>
 </div>
+
 <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
 <script src='https://cdn.terminal.jcubic.pl/wcwidth.js'></script>
 <script src='https://unpkg.com/jquery.terminal/js/jquery.terminal.js'></script>
 <script src='https://unpkg.com/jquery.terminal/js/jquery.mousewheel-min.js'></script>
 <script src='https://unpkg.com/js-polyfills/keyboard.js'></script>
 <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script src="{{ 'resources/js/terminal.js' | relative_url }}"></script>
