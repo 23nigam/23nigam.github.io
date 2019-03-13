@@ -1,0 +1,3 @@
+$(function() {
+    $(".terminal-output").empty();
+});

@@ -1,0 +1,193 @@
+---
+###
+# note: will result in an all-in-one-file stylesheet e.g. style.css
+#   in _config.yml add:
+#     sass:
+#       sass_dir: css
+#       style:    expanded
+---
+
+
+@import 'settings';
+
+/*
+ * css styles go here
+ */
+
+body {
+  font-family: $font-family;
+  color: #c9c9c9;
+  background-color: #353535;
+}
+
+a, a:visited {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav-title
+{
+  font-family: "Ubuntu Mono", monospace;
+  font-size: x-large;
+}
+
+.panel-title
+{
+  font-family: "Ubuntu Mono", monospace;
+  font-size: -webkit-xxx-large;
+}
+
+.prompt
+{
+  color: #289900;
+}
+
+.upper
+{
+  display: flex;
+  flex-wrap: wrap; /* Optional. only if you want the items to wrap */
+  justify-content: center; /* For horizontal alignment */
+  align-items: center; /* For vertical alignment */
+}
+
+
+#header {
+  padding: 4px;
+  width: 25%;
+}
+
+#nav {
+  padding: 6px;
+  width: 60&;
+  float:right;
+  margin-top: -60px;
+}
+
+.profile {
+  width: 30%;
+  margin-left: 35%;
+  border-radius: 50%;
+  border-color: #353535;
+  border-width: medium;
+  border-style: solid;
+  background-color: lightgray;
+  margin-top: 2%;
+}
+
+/* ----------- Terminal ------------- */
+
+form {
+    margin: 10px;
+}
+body .shell {
+    width: 950px;
+    height: 450px;
+    left: 220px;
+    top: 50px;
+}
+body .shell .terminal {
+    height: calc(100% - 29px);
+    padding: 10px;
+    /*
+     * padding bottom 0 on terminal and margin
+     * on .cmd will be in version 2.0.1
+     * that fixes FireFox issue
+     */
+    padding-bottom: 0;
+}
+body .shell .terminal .cmd {
+    margin-bottom: 10px;
+}
+.shell .typed-cursor, .shell .cursor {
+    background: transparent;
+}
+.shell > .status-bar .title {
+    cursor: move;
+}
+/*
+ * fix to shell.js to center title to free space
+ */
+.shell.windows .status-bar .title {
+    right: 106px;
+}
+@supports (--css: variables) {
+    .shell .terminal {
+        --color: #aaa;
+    }
+    .shell.ubuntu .terminal {
+        --background: #300924;
+    }
+    .shell.osx .content.terminal {
+        --background: #222;
+    }
+    .shell.light .content.terminal {
+        --background: white;
+        --color: black;
+    }
+    /*
+    * windows and custom are the last ones so
+    * they don't get overwritten by light
+    */
+    .shell.windows .content.terminal {
+        --background: black;
+        --color: white;
+        --animation: terminal-underline;
+    }   
+    .shell.custom .content.terminal {
+        --background: #292929;
+        --color: #aaa;
+    }
+}
+/*
+ * overwrite shell.js style because shell.js   
+ * selectors are stronger then terminal ones
+ */
+.cmd span.cursor {
+    animation: none;
+    width: auto;
+    background-color: var(--background, #000);
+}
+.shell terminal.content,
+.shell.osx.dark .content,
+.shell.ubuntu .content {
+    background-color: var(--background, #222) !important;
+}
+.shell .terminal.content {
+    font-size: 12px;
+}
+.cmd {
+    background-color: inherit;
+}
+@supports (--css: variables) {
+    .shell .terminal.content {
+        font-size: calc(var(--size, 1) * 12px);
+    }
+}
+/* fix for Firefox */
+.terminal > .resizer, .terminal > .font .resizer {
+    visibility: visible;
+    pointer-events: none;
+}
+.terminal::-webkit-scrollbar-track
+{
+  border: 1px solid var(--color, #aaa);
+  background-color: var(--background);
+}
+.terminal::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: var(--background);
+}
+.terminal::-webkit-scrollbar-thumb
+{
+  background-color: var(--color, #aaa);
+}
+
+
+
+
+
