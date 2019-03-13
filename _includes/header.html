@@ -1,16 +1,16 @@
 
-<div style="display: inline;">
+<div style="display: inline;display: none;">
 <div id="header">
-	<h2 class="title">NS</h2>
+	<h2 class="nav-title">NS</h2>
 </div>
 
 
-<div id="nav">
+<div id="nav" style="display: none;">
 {% for item in site.nav %}
   {% if item.href contains 'http' %}
-     <a class="title" href="{{ item.href }}">{{ item.title }}</a>
+     <a class="nav-title" href="{{ item.href }}">{{ item.title }}</a>
   {% else %}
-     <a class="title" href="{{ item.href | relative_url }}">{{ item.title }}</a>
+     <a class="nav-title" href="{{ item.href | relative_url }}">{{ item.title }}</a>
   {% endif %}
   {% if forloop.last %}  {% else %} • {% endif %}
 {% endfor %}
