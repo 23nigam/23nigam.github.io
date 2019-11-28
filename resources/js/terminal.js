@@ -11,7 +11,7 @@ var commands = {
         this.echo('Nigam is open to relocating anywhere in the Solar System');
     },
     ls: function() {
-        this.echo('Nigam works as a SDE2 at Capillary Technologies');
+        this.echo('Nigam works as a Software Engineer(Associate) at Goldman Sachs');
     },
     cat: function() {
         this.echo('Nigam does not like Cats');
